@@ -42,10 +42,10 @@ return [
         public_path('build') => 'build',
         public_path('assets') => 'assets',
         public_path('vendor') => 'vendor',
+        public_path('keybase.txt') => 'keybase.txt',
     ],
 
     'symlinks' => [
-        public_path('keybase.txt') => 'keybase.txt',
         public_path('css') => 'css',
         public_path('js') => 'js',
     ],
