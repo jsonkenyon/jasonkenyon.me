@@ -62,7 +62,8 @@ return [
 
     'urls' => [
         '/sitemap.xml',
-        '/humans.txt'
+        '/humans.txt',
+        '/keybase.txt'
     ],
 
     /*
