@@ -1,0 +1,88 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: repo_link
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Repo Link'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: project_content
+            field:
+              automatic_line_breaks: true
+              automatic_links: false
+              escape_markup: false
+              smartypants: false
+              restrict: false
+              antlers: false
+              type: markdown
+              display: 'Project Content'
+              icon: markdown
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: opensource
+            field:
+              default: false
+              type: toggle
+              display: Opensource
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: archived
+            field:
+              default: false
+              type: toggle
+              display: Archived
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: stacks
+            field:
+              mode: select
+              create: true
+              taxonomies:
+                - stacks
+              type: terms
+              display: Stacks
+              icon: taxonomy
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+title: Project

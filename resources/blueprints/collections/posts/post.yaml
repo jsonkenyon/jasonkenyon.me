@@ -1,0 +1,131 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: post_image
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: assets
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Post Image'
+              icon: assets
+              instructions: 'Posts cover image.  Can be gotten from Unsplash, etc.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              folder: cover_
+          -
+            handle: article_content
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h4
+                - h5
+                - h6
+                - underline
+                - small
+                - superscript
+                - subscript
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: floating
+              reading_time: true
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: true
+              link_noreferrer: true
+              target_blank: true
+              sets:
+                code:
+                  display: Code
+                  instructions: 'Code blocks, etc.'
+                  icon: programming-script-code-brackets
+                  sets:
+                    code_block:
+                      display: 'Code Block'
+                      instructions: null
+                      icon: programming-script-code-brackets
+                      fields:
+                        -
+                          handle: torchlight_block
+                          field:
+                            automatic_line_breaks: true
+                            automatic_links: false
+                            escape_markup: false
+                            smartypants: false
+                            restrict: false
+                            antlers: true
+                            type: markdown
+                            display: 'Torchlight Block'
+                            icon: markdown
+                            instructions: 'Display code with torchlight highlighting.'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: bard
+              display: 'Article Content'
+              icon: bard
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select
+title: Post

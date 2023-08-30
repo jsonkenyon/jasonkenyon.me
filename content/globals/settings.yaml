@@ -1,0 +1,60 @@
+title: Settings
+data:
+  cta: |-
+    ```php
+    /**
+    *
+    *        ██╗ █████╗ ███████╗ ██████╗ ███╗   ██╗    ██╗  ██╗
+    *        ██║██╔══██╗██╔════╝██╔═══██╗████╗  ██║    ██║ ██╔╝
+    *        ██║███████║███████╗██║   ██║██╔██╗ ██║    █████╔╝
+    *   ██   ██║██╔══██║╚════██║██║   ██║██║╚██╗██║    ██╔═██╗
+    *   ╚█████╔╝██║  ██║███████║╚██████╔╝██║ ╚████║    ██║  ██╗
+    *    ╚════╝ ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═╝  ╚═╝
+    *
+    *  The online webspace of web developer Jason Kenyon
+    *  Code highlighting provided by Torchlight
+    *  https://torchlight.dev/
+    */
+     
+    public function websiteStack() {
+     
+        /**
+        *
+        * Making bad ass websites that make you smack your momma
+        * since who knows when, does it really matter anyway?
+        */
+     
+        return [
+            'websiteStack' => [
+                'version' => '2.0',
+                'poweredBy' => 'Statamic || https://statamic.com/',
+                'CSS Framework' => 'TailwindCSS || https://tailwindcss.com/',
+                'codeHightlighting' => 'Torchlight || https://torchlight.dev/'
+            ]
+        ];
+    }
+    ```
+
+    {{ partial:themeswitcher }}
+  social:
+    -
+      id: lhmlgt3k
+      name: Gitlab
+      link: 'https://gitlab.com/jsonkenyon'
+      icon: gitlab
+    -
+      id: lhmn3a46
+      name: Github
+      link: 'https://github.com/jasonkenyon'
+      icon: github
+    -
+      id: lhmn3mxs
+      name: Twitter
+      link: 'https://twitter.com/jsonkenyon'
+      icon: twitter
+    -
+      id: llts595g
+      name: Keybase
+      link: 'https://keybase.io/jsonkenyon_'
+      icon: keybase
+  favicon: favicon/favicon-32x32.png

@@ -1,0 +1,99 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: cta
+            field:
+              automatic_line_breaks: true
+              automatic_links: false
+              escape_markup: false
+              smartypants: false
+              restrict: false
+              antlers: true
+              type: markdown
+              display: CTA
+              icon: markdown
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: social
+            field:
+              fields:
+                -
+                  handle: name
+                  field:
+                    input_type: text
+                    placeholder: Gitlab
+                    antlers: false
+                    type: text
+                    display: Name
+                    icon: text
+                    instructions: 'Name of the social media platform'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    width: 25
+                -
+                  handle: link
+                  field:
+                    input_type: text
+                    placeholder: 'https://gitlab.com/jsonkenyon'
+                    antlers: false
+                    type: text
+                    display: Link
+                    icon: text
+                    instructions: 'Link to profile on social media platform'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    width: 50
+                -
+                  handle: icon
+                  field:
+                    directory: resources/svg/icons
+                    type: icon
+                    display: Icon
+                    icon: icon_picker
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    folder: socials
+              mode: table
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: Social
+              icon: grid
+              instructions: 'Add any social media links'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: favicon
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Favicon
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              folder: favicon

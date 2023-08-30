@@ -1,0 +1,132 @@
+hide: true
+title: Uses
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: heading
+            field:
+              antlers: false
+              type: textarea
+              display: Heading
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: section
+            field:
+              collapse: false
+              previews: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: heading
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Heading
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: information
+                          field:
+                            antlers: false
+                            type: textarea
+                            display: Information
+                            icon: textarea
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: content
+                          field:
+                            automatic_line_breaks: true
+                            automatic_links: false
+                            escape_markup: false
+                            smartypants: false
+                            restrict: false
+                            antlers: true
+                            type: markdown
+                            display: Content
+                            icon: markdown
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: Section
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: template
+            field:
+              hide_partials: true
+              blueprint: false
+              folder: pages
+              type: template
+              display: Template
+              icon: template
+              instructions: 'The template that this page should be using. As this is the uses page it should be using the pages/uses template.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: is_hidden
+            field:
+              default: true
+              type: toggle
+              display: 'Hide In Nav'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

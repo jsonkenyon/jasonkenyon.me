@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jsonkenyon_
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jasonkenyon.me
+  * I am jsonkenyon_ (https://keybase.io/jsonkenyon_) on keybase.
+  * I have a public key ASBLPTWM0sHAXBKX_bSjxwktJpuySzhcGjJyBk2wacRyfgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01165c6b46dfd95fbc90a8a9d03fc7dfde74bf4091d577e08943f3fee4e07b6ae1d70a",
+      "host": "keybase.io",
+      "kid": "01204b3d358cd2c1c05c1297fdb4a3c7092d269bb24b385c1a3272064db069c4727e0a",
+      "uid": "a6873702d0d96762f4a77634392a0219",
+      "username": "jsonkenyon_"
+    },
+    "merkle_root": {
+      "ctime": 1693323967,
+      "hash": "1deda73c53611cd56c452bdc892a6e088721bb597f9da1c98fe878def604135d16a010af7214846bb65a9ba40fc82f0a265e646b77977de9c028603a2cc55dc7",
+      "hash_meta": "96747ff04367f5df4528bb8ade9be1083823a80fc7f225bc3fb5632117d81c02",
+      "seqno": 24864502
+    },
+    "service": {
+      "entropy": "N35vHOHa7DU6E7RtxMtpXb4K",
+      "hostname": "jasonkenyon.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.1"
+  },
+  "ctime": 1693323993,
+  "expire_in": 504576000,
+  "prev": "f95e6880fdd122351d19c73805204e4891ed58e475d4c203e96d7e77d329bbf7",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgSz01jNLBwFwSl/20o8cJLSabsks4XBoycgZNsGnEcn4Kp3BheWxvYWTESpcCEcQg+V5ogP3RIjUdGcc4BSBOSJHtWOR11MID6W1+d9Mpu/fEIFhU04ITJlqBgpBiuoRbsa3Vt8/pmEmcCms+2FMBbe8sAgHCo3NpZ8RA0FYLvvQ+QrtmCJOTYPhR89MJiFmKCPpV9dtNSA9/kCthIAEurUiCInvSW0d4Cmq0aAXr4qwN0XMsGzs4G4E9BahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMst6NZk6VYE9UMyU6vVYRdN5wie5tkJFE9F/TJTIa75o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jsonkenyon_
+
+==================================================================

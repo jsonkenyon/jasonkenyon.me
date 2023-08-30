@@ -1,0 +1,62 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: networks
+            field:
+              fields:
+                -
+                  handle: name
+                  field:
+                    input_type: text
+                    placeholder: Twitter
+                    antlers: false
+                    type: text
+                    display: Name
+                    icon: text
+                    instructions: 'Name of the social media platform'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: link
+                  field:
+                    input_type: text
+                    placeholder: 'https://twitter.com/jsonkenyon'
+                    antlers: false
+                    type: text
+                    display: Link
+                    icon: text
+                    instructions: 'Link to profile on social media platform'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: icon
+                  field:
+                    directory: resources/svg
+                    folder: socials
+                    type: icon
+                    display: Icon
+                    icon: icon_picker
+                    instructions: 'Social media icon in SVG format'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+              mode: table
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: Networks
+              icon: grid
+              instructions: 'Add any social media links'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

@@ -1,0 +1,32 @@
+<section class="flex-full">
+    <div class="container max-w-5xl px-8 mx-auto mt-10">
+        <h2 class="pb-6 mb-4 text-4xl font-bold text-gray-600 border-b border-purple-300 dark:text-gray-300">
+            {{ title }}
+        </h2>
+        {{ if {heading} }}
+        <div class="pb-6 min-w-full prose prose-lg prose-lightMode dark:prose-darkMode">
+            <p>
+                {{ heading }}
+            </p>
+        </div>
+        {{ /if }}
+        {{ section }}
+        <section class="min-w-full prose prose-lg prose-lightMode dark:prose-darkMode">
+            <h3 class="pb-6 mt-10 mb-4 text-2xl font-bold text-gray-600 border-b border-purple-300 dark:text-gray-300">
+                {{ heading }}
+            </h3>
+            <p>
+                {{ information }}
+            </p>
+            <div>
+                {{ content }}
+            </div>
+        </section>
+        {{ /section }}
+    </div>
+
+    {{ section:themeswitcher }}
+    <div class="mr-8">
+        {{ partial:themeswitcher }}
+    </div>
+    {{ /section:themeswitcher }}

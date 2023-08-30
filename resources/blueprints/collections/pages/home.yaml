@@ -1,0 +1,157 @@
+hide: true
+title: Home
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: primary_heading
+            field:
+              input_type: text
+              placeholder: 'Latest Posts'
+              default: 'Latest Posts'
+              antlers: false
+              type: text
+              display: 'Primary Heading'
+              icon: text
+              instructions: 'Primary/Main heading of the homepage.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: about_heading
+            field:
+              input_type: text
+              placeholder: 'About Me'
+              default: 'About Me'
+              antlers: false
+              type: text
+              display: 'About Heading'
+              icon: text
+              instructions: 'Heading for about me section.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: about_content
+            field:
+              automatic_line_breaks: true
+              automatic_links: true
+              escape_markup: false
+              smartypants: false
+              restrict: false
+              antlers: true
+              type: markdown
+              display: 'About Content'
+              icon: markdown
+              instructions: 'Content for the about me section.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: about_picture
+            field:
+              max_files: 1
+              min_files: 1
+              mode: grid
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'About Picture'
+              icon: assets
+              instructions: 'Picture of Jason Kenyon'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: secondary_heading
+            field:
+              input_type: text
+              placeholder: 'Secondary Heading'
+              antlers: false
+              type: text
+              display: 'Secondary Heading'
+              icon: text
+              instructions: 'Secondary Heading.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: third_heading
+            field:
+              input_type: text
+              placeholder: Projects
+              default: Projects
+              antlers: false
+              type: text
+              display: 'Third Heading'
+              icon: text
+              instructions: 'Third Heading'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: fourth_heading
+            field:
+              input_type: text
+              placeholder: 'Archived Projects'
+              default: 'Archived Projects'
+              antlers: false
+              type: text
+              display: 'Fourth Heading'
+              icon: text
+              instructions: 'Fourth Heading'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: template
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Template
+              icon: template
+              instructions: 'The template that this page should be using.  As this is the home page it should be using the home template.'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

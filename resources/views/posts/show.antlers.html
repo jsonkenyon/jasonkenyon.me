@@ -1,0 +1,208 @@
+<article class="mb-16 flex-full">
+    <div class="container max-w-5xl px-8 mx-auto mt-10">
+        <h1 class="mb-2 text-5xl font-bold leading-none text-gray-600 dark:text-gray-300">{{ title }}</h1>
+        <span class="block mb-2 text-lg font-bold text-gray-600 uppercase dark:text-gray-300">{{ date }}</span>
+        {{ tags as="ts" }}
+        {{ if !no_result }}
+        <div class="flex pb-2 mt-2 space-x-4">
+            {{ ts }}
+            <a href="{{ url }}" title="View all posts tagged under {{ title }}"><span
+                    class="inline-block px-3 pt-px text-xs font-semibold leading-loose tracking-wide text-gray-800 uppercase bg-purple-200 border border-purple-400 rounded hover:bg-purple-300">{{
+                    title }}</span></a>
+            {{ /ts }}
+        </div>
+        {{ /if }}
+        {{ /tags }}
+
+        <span class="block mt-2 font-medium text-gray-600 dark:text-gray-300 text-md">{{ article_content | flatten |
+            collapse | join | strip_tags | read_time }}
+            Minute Read</span>
+        <div class="pb-6 mt-6 mb-10 border-t border-purple-300">
+            <div class="mt-6">
+                {{ article_content }}
+                {{ partial src="bard_sets/{type}" }}
+                {{ /article_content }}
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<div class="flex justify-between">
+    <div class="flex justify-start">
+        {{ collection:previous in="writing" as="pagination" limit="1" sort="date:asc" }}
+        <div class="paginationPrev">
+            {{ pagination }}
+            {{ if !no_results }}
+            <a href="{{ url }}"> <span
+                    class="inline-block p-3 text-sm font-semibold leading-loose tracking-wide text-gray-800 uppercase bg-purple-300 rounded hover:bg-purple-200">
+                    &larr; {{ title }} </span>
+            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {{ endif }}
+            {{ /pagination }}
+        </div>
+        {{ /collection:previous }}
+    </div>
+
+    <div class="flex justify-end">
+        {{ collection:next in="writing" as="pagination" limit="1" sort="date:asc" }}
+        <div class="paginationPrev">
+            {{ pagination }}
+            {{ if !no_results }}
+            <a href="{{ url }}"> <span
+                    class="inline-block p-3 text-sm font-semibold leading-loose tracking-wide text-gray-800 uppercase bg-purple-300 rounded hover:bg-purple-200">
+                    {{ title }} &rarr;
+                </span>
+            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {{ endif }}
+            {{ /pagination }}
+        </div>
+        {{ /collection:next }}
+    </div>
+</div>
