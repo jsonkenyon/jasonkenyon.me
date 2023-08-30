@@ -63,7 +63,6 @@ return [
     'urls' => [
         '/sitemap.xml',
         '/humans.txt',
-        '/keybase.txt'
     ],
 
     /*
