@@ -1,0 +1,86 @@
+<section class="mb-16">
+    <div class="container max-w-5xl px-8 mx-auto mt-10">
+        <h2 class="mb-2 text-4xl font-bold text-gray-600 dark:text-gray-300">Projects</h2>
+        <div class="mb-6 text-base font-semibold text-gray-600 dark:text-gray-300">All entries tagged with "<span
+                class="font-bold text-purple-700 dark:text-purple-400">{{ title }}</span>"</div>
+        <div class="container max-w-5xl px-8 mx-auto mt-10">
+            {{ entries as="projects" paginate="6" }}
+            {{ projects }}
+            <a href="{{ repo_link }}" target="_blank" rel="noopener noreferrer">
+                <h3
+                    class="text-3xl font-semibold text-purple-500 dark:text-purple-300 dark:hover:text-purple-400 hover:text-purple-600 hover:underline">
+                    {{ title }}
+                </h3>
+            </a>
+            <div class="flex justify-between mb-1">
+                <span class="block font-bold text-gray-600 uppercase dark:text-gray-300 text-md">
+                    {{ opensource ? 'Open Source' : 'Closed Source' }} {{ archived ? ' - Archived' : '' }}
+                </span>
+                <div class="flex space-x-4 text-purple-700 dark:text-purple-400">
+                    {{ stacks }}
+                    {{ svg :src="stack_icon" class="w-5 h-5 fill-current" }}
+                    {{ /stacks }}
+                </div>
+            </div>
+            <div class="mt-2 mb-8 prose max-w-none prose-lightMode dark:text-gray-200">
+                {{ project_content }}
+            </div>
+            {{ /projects }}
+        </div>
+
+        {{ paginate }}
+        <div class="flex items-center justify-center pt-8 mt-12 space-x-4 border-t border-purple-300">
+            {{ if prev_page }}
+            <div><a class="text-xl font-semibold text-fuchsia-800 hover:text-fuchsia-600 hover:underline"
+                    href="{{ prev_page }}">&laquo;</a></div>
+            {{ /if }}
+            {{ links:segments }}
+            {{ first }}
+            {{ if page == current_page }}
+            <div
+                class="block px-3 py-1.5 text-white bg-purple-400 rounded-full border-0 shadow-md transition-all duration-300 outline-none hover:bg-purple-400 hover:text-gray-100 focus:shadow-md">
+                <span>{{ page }}</span>
+            </div>
+            {{ else }}
+            <div><a class="block px-3 py-1.5 text-gray-700 rounded-full border-0 shadow-md transition-all duration-300 outline-none hover:bg-purple-400 hover:text-gray-100 focus:shadow-md"
+                    href="{{ url }}">{{ page }}</a></div>
+            {{ /if }}
+            {{ /first }}
+            {{ if slider }}
+            <div class="disabled"><span>...</span></div>
+            {{ /if }}
+            {{ slider }}
+            {{ if page == current_page }}
+            <div
+                class="block px-3 py-1.5 text-white bg-purple-400 rounded-full border-0 shadow-md transition-all duration-300 outline-none hover:bg-purple-400 hover:text-gray-100 focus:shadow-md">
+                <span>{{ page }}</span>
+            </div>
+            {{ else }}
+            <li><a class="block px-3 py-1.5 text-gray-700 rounded-full border-0 shadow-md transition-all duration-300 outline-none hover:bg-purple-400 hover:text-gray-100 focus:shadow-md"
+                    href="{{ url }}">{{ page }}</a></li>
+            {{ /if }}
+            {{ /slider }}
+            {{ if slider || (!slider && last) }}
+            <div class="disabled"><span>...</span></div>
+            {{ /if }}
+            {{ last }}
+            {{ if page == current_page }}
+            <div
+                class="block px-3 py-1.5 text-white bg-purple-400 rounded-full border-0 shadow-md transition-all duration-300 outline-none hover:bg-purple-400 hover:text-gray-100 focus:shadow-md">
+                <span>{{ page }}</span>
+            </div>
+            {{ else }}
+            <div><a class="block px-3 py-1.5 text-gray-700 rounded-full border-0 shadow-md transition-all duration-300 outline-none hover:bg-purple-400 hover:text-gray-100 focus:shadow-md"
+                    href="{{ url }}">{{ page }}</a></div>
+            {{ /if }}
+            {{ /last }}
+            {{ /links:segments }}
+            {{ if next_page }}
+            <div><a class="text-xl font-semibold text-fuchsia-800 hover:text-fuchsia-600 hover:underline"
+                    href="{{ next_page }}">&raquo;</a></div>
+            {{ /if }}
+        </div>
+        {{ /paginate }}
+        {{ /entries }}
+    </div>
+</section>
