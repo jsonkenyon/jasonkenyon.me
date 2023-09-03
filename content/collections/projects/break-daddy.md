@@ -6,7 +6,7 @@ project_content: 'An application that was built using Laravel, Vuejs, Moment.js,
 opensource: false
 archived: true
 updated_by: 9f244b88-fd37-4c36-8736-751289f47f08
-updated_at: 1684121873
+updated_at: 1693768623
 stack:
   - laravel
   - slack
@@ -15,4 +15,5 @@ stacks:
   - laravel
   - slack
   - vuejs
+  - archived
 ---

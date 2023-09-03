@@ -14,10 +14,11 @@ stack:
   - google-sheets
   - slack
 updated_by: 9f244b88-fd37-4c36-8736-751289f47f08
-updated_at: 1684121907
+updated_at: 1693768630
 stacks:
   - laravel
   - slack
   - google-drive
   - google-sheets
+  - archived
 ---

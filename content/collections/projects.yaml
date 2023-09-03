@@ -1,4 +1,6 @@
 title: Projects
+taxonomies:
+  - stacks
 revisions: false
 date_behavior:
   past: public
