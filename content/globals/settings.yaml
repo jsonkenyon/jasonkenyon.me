@@ -57,4 +57,9 @@ data:
       name: Keybase
       link: 'https://keybase.io/jsonkenyon_'
       icon: keybase
+    -
+      id: lm4c5a3s
+      name: Twitch
+      link: 'https://www.twitch.tv/json84'
+      icon: twitch
   favicon: favicon/favicon-32x32.png
